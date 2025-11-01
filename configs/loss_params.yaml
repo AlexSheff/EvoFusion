@@ -1,0 +1,16 @@
+# Parameters for EvoLoss (mutation boundaries, available losses, etc.)
+available:
+  - mse
+  - mae
+  - smooth_l1
+mutation:
+  rate: 0.2
+  noise: 0.1
+params:
+  mse:
+    reduction: ["mean", "sum"]
+  mae:
+    reduction: ["mean", "sum"]
+  smooth_l1:
+    beta: [0.5, 2.0]
+    reduction: ["mean", "sum"]

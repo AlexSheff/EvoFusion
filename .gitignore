@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+.venv/
+env/
+venv/
+
+# IDEs and editors
+.idea/
+.vscode/
+.DS_Store
+
+# Project outputs
+results/
+logs/
+reports/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Misc
+*.log
+*.tmp

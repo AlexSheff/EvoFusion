@@ -1,0 +1,10 @@
+generations: 10
+activ_population_size: 12
+loss_population_size: 12
+metrics:
+  - accuracy
+  - f1
+  - convergence
+dataset: mnist
+parallel: false
+results_dir: ./results

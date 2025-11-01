@@ -1,0 +1,15 @@
+# Parameters for EvoActiv (mutation boundaries, available activations, etc.)
+available:
+  - relu
+  - leaky_relu
+  - elu
+mutation:
+  rate: 0.2
+  noise: 0.1
+params:
+  relu:
+    leak: [0.0, 0.05]
+  leaky_relu:
+    leak: [0.001, 0.2]
+  elu:
+    alpha: [0.5, 2.0]

@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+scipy
+sympy
+pyyaml
+tqdm
+scikit-learn
+torchvision
+
+# Optional for parallel computing:
+# ray
+# dask
+
+# NOTE: torch is installed from local WHL file and is not listed here
+# to avoid conflicts with CPU version when installing through PyPI.

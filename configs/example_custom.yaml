@@ -1,0 +1,23 @@
+# Example configuration for EvoFusion with custom dataset and evolution params
+
+fusion:
+  generations: 5
+  activ_population_size: 3
+  loss_population_size: 3
+  metrics: ["accuracy", "f1", "convergence"]
+  results_dir: "results"
+
+dataset:
+  # Built-ins: mnist | fashion_mnist | cifar10 | cifar100
+  # Custom: image_folder (class subfolders inside image_folder_root)
+  name: "image_folder"
+  image_folder_root: "./my_images"   # folder with class subdirectories
+  root: "./data"
+  batch_size: 32
+  val_split: 0.2
+  num_workers: 2
+  download: false
+
+training:
+  epochs: 3
+  seed: 42
