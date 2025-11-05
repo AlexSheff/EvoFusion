@@ -4,7 +4,7 @@
 
 1. Install PyTorch from the local WHL in the project root:
    ```
-   pip install .\torch-2.4.0+cu118-cp310-cp310-win_amd64.whl
+   pip install torch-2.4.0
    ```
 2. Install basic dependencies:
    ```
