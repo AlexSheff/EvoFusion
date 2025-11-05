@@ -9,6 +9,7 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15          # хард-лимит, чтобы не висеть 6 ч
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
@@ -25,6 +26,10 @@ jobs:
           # Install CPU-only PyTorch for CI
           pip install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cpu
 
-      - name: Run unit tests
-        run: |
-          python -m unittest discover -s tests -v
+      - name: Run fast unit tests (PR)
+        if: github.event_name == 'pull_request'
+        run: python -m unittest discover -s tests -v -k "not test_evolution"   # исключаем тяжёлый тест
+
+      - name: Run full tests (push)
+        if: github.event_name == 'push'
+        run: python -m unittest discover -s tests -v
